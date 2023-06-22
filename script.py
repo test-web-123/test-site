@@ -4,9 +4,9 @@ import csv
 import os
 
 session = requests.Session()
-#access_token = os.environ.get('TOKEN')
+access_token = os.environ.get('GITHUB_TOKEN')
 #access_token = os.environ.get('github')
-access_token = '3681c6ef66b33fa05508f5136254ebafa45c56ec'
+#access_token = '3681c6ef66b33fa05508f5136254ebafa45c56ec'
 session.headers.update({'Authorization': f'Bearer {access_token}'})
 org = 'test-web-123'
 
