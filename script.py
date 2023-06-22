@@ -16,7 +16,6 @@ writer.writerow(['repository', 'data'])
 
 repoResponse = session.get(f'https://api.github.com/orgs/{org}/repos')
 repos = json.loads(repoResponse.content)
-print(repos)
 
 
 for repo in repos:
@@ -25,6 +24,7 @@ for repo in repos:
     collaboratorsResponse = session.get(f'https://api.github.com/repos/{ownerName}/{repoName}/collaborators')
     collaborators = json.loads(collaboratorsResponse.content)
     for collaborator in collaborators:
+        print(collaborator)
         userPermission = collaborator['permissions']
         if (userPermission['admin'] == True):
             userResponse = session.get(f"https://api.github.com/users/{collaborator['login']}")
