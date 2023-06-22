@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Github Admins/Maintainers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="heading"> Infoblox-CTO Admins/Maintainers</h1>
+      <div id="right-panel">
+        <spam id="syncTime">
+        Last Synced : 02:00 AM UTC
+        </spam>
+        <button onclick="showSteps()" id="howToUse">How to use?</button>
+      </div>
+      <div id="steps">
+        <h3>Steps:</h3>
+        <button id="close" onclick="hideSteps()">Close</button>
+        <ul>
+          <li>
+            Search for your repository.
+          </li>
+          <li>
+            Click on the name of any Maintainers/Admins.
+          </li>
+          <li>
+            User name will be copied to your clipboard. Go ahead and search them on slack. 
+          </li>
+        </ul>
+      </div>
+      <div id="hidden-flex"></div>
+    </header>
+    <div id="Legends">
+      <button class="adminUser">Admins<img src="data/adminIcon.svg"/></button>
+      <button class="maintainUser">Maintainers<img src="data/maintainerIcon.svg"/></button>
+    </div>
+    <input type="text" id="input" onkeyup="getRepos()" placeholder="Start entering repository...">
+    <table id="repoTable">
+      <thead>
+        <tr>
+          <th>Repositories</th>
+          <th>Admins/Maintainers</th>
+        </tr>
+      </thead>
+      <tbody>
+         <tr>
+          <td>repo-1</td>
+          
+      <td>
+        
+        <button class="adminUser" onclick="copyToClipboard('Sushant Chauhan')">
+            Sushant Chauhan 
+            <img src="data/adminCopyLogo.svg" />
+        </button>
+        
+      </td>
+    </tr>
+       <tr>
+          <td>repo-2</td>
+          
+      <td>
+        
+        <button class="maintainUser" onclick="copyToClipboard('Raviraja Kadekar')">
+            Raviraja Kadekar 
+            <img src="data/adminCopyLogo.svg" />
+        </button>
+        
+        <button class="adminUser" onclick="copyToClipboard('Sushant Chauhan')">
+            Sushant Chauhan 
+            <img src="data/adminCopyLogo.svg" />
+        </button>
+        
+      </td>
+    </tr>
+    
+  </tbody>
+    </table>
+    <footer>
+      <div id="footerDiv">
+        <a href="https://infoblox.atlassian.net/secure/CreateIssue.jspa?pid=10019">missing info</a>
+        <br>
+        <p>
+          Maintained by team DEVOPS SRE.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
