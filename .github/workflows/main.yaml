@@ -31,7 +31,7 @@ jobs:
 
       - name: execute py script
         env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+          TOKEN: ${{ steps.generate_token.outputs.token }}
         run: python script.py
         
       - name: update website source code
